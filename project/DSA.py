@@ -1,4 +1,4 @@
-from algorithms.LinkedListCycle import *
+from algorithms.ReverseLinkedList import *
 from dataStructures import *
 
-print(Solution().hasCycle(cycleLinkedList([1], -1)))
+print(Solution().reverseBetween(linkedList([5]), 1, 1))
