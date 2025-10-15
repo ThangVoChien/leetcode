@@ -1,4 +1,4 @@
-from algorithms.LongestSubstringWithoutRepeatingCharacters import *
+from algorithms.AddTwoNumbers import *
 from dataStructures import *
 
-print(Solution().lengthOfLongestSubstring("abcabcbb"))
+print(Solution().addTwoNumbers(linkedList([9,9,9,9,9,9,9]), linkedList([9,9,9,9])))
