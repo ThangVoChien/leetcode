@@ -1,4 +1,4 @@
-from algorithms.LongestPalindromicSubstring import *
+from algorithms.ZigzagConversion import *
 from dataStructures import *
 
-print(Solution().longestPalindrome("aacabdkacaa"))
+print(Solution().convert("PAYPALISHIRING", 4))
