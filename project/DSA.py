@@ -1,4 +1,4 @@
-from algorithms.ZigzagConversion import *
+from algorithms.ReverseInteger import *
 from dataStructures import *
 
-print(Solution().convert("PAYPALISHIRING", 4))
+print(Solution().reverse(2**31 - 1))
