@@ -1,4 +1,4 @@
-from algorithms.ReverseInteger import *
+from algorithms.StringToInteger import *
 from dataStructures import *
 
-print(Solution().reverse(2**31 - 1))
+print(Solution().myAtoi(" "))
