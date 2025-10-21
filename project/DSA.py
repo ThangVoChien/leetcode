@@ -1,4 +1,4 @@
-from algorithms.StringToInteger import *
+from algorithms.PalindromeNumber import *
 from dataStructures import *
 
-print(Solution().myAtoi(" "))
+print(Solution().isPalindrome(121))
