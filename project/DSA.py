@@ -1,4 +1,4 @@
-from algorithms.RomanToInteger import *
+from algorithms.IntegerToRoman import *
 from dataStructures import *
 
-print(Solution().romanToInt("VII"))
+print(Solution().intToRoman(1994))
