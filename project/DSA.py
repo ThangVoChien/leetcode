@@ -1,4 +1,4 @@
-from algorithms.PalindromeNumber import *
+from algorithms.LongestCommonPrefix import *
 from dataStructures import *
 
-print(Solution().isPalindrome(121))
+print(Solution().longestCommonPrefix(["dog","racecar","car"]))
