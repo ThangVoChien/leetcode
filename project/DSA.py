@@ -1,4 +1,4 @@
-from algorithms.LongestCommonPrefix import *
+from algorithms.RomanToInteger import *
 from dataStructures import *
 
-print(Solution().longestCommonPrefix(["dog","racecar","car"]))
+print(Solution().romanToInt("VII"))
