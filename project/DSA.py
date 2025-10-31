@@ -1,4 +1,4 @@
-from algorithms. ThreeSumClosest import *
+from algorithms.LetterCombinationsOfAPhoneNumber import *
 from dataStructures import *
 
-print(Solution().threeSumClosest([0,0,0], 1))
+print(Solution().letterCombinations("2"))
