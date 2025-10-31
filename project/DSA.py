@@ -1,4 +1,4 @@
-from algorithms.LetterCombinationsOfAPhoneNumber import *
+from algorithms.RemoveNthNodeFromEndOfList import *
 from dataStructures import *
 
-print(Solution().letterCombinations("2"))
+print(Solution().removeNthFromEnd(linkedList([1, 2]), 1))
