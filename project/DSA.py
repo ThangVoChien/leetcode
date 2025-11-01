@@ -1,4 +1,4 @@
-from algorithms.RemoveNthNodeFromEndOfList import *
+from algorithms.GenerateParentheses import *
 from dataStructures import *
 
-print(Solution().removeNthFromEnd(linkedList([1, 2]), 1))
+print(Solution().generateParenthesis(1))
