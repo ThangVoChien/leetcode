@@ -1,4 +1,4 @@
-from algorithms.GenerateParentheses import *
+from algorithms.SwapNodesInPairs import *
 from dataStructures import *
 
-print(Solution().generateParenthesis(1))
+print(Solution().swapPairs(linkedList([1,2,3])))
