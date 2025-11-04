@@ -73,7 +73,6 @@ class Solution:
                     z = nums3[start] + nums4[end]
                     if z == y:
                         sol+=1
-                        print(nums1[i], nums2[j], nums3[start], nums4[end])
                         start += 1
                         end -= 1
                     elif z < y:
