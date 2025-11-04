@@ -1,4 +1,4 @@
-from algorithms.RemoveDuplicatesFromSortedArray import *
+from algorithms.FourSum import *
 from dataStructures import *
 
-print(Solution().removeDuplicates2([0,0,1,1,1,1,2,3,3]))
+print(Solution().fourSumCount([0],[0],[0],[0]))
