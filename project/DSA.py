@@ -1,4 +1,4 @@
-from algorithms.BalancedBinaryTree import *
+from algorithms.FindTheIndexOfTheFirstOccurrenceInAString import *
 from dataStructures import *
 
-print(Solution().addTwoNumbers(linkedList([2]), linkedList([8,9,9])))
+print(Solution().strStr("leetcode", "leeto"))
