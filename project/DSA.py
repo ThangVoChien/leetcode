@@ -1,4 +1,4 @@
-from algorithms.FindTheIndexOfTheFirstOccurrenceInAString import *
+from algorithms.NextPermutation import *
 from dataStructures import *
 
-print(Solution().strStr("leetcode", "leeto"))
+print(Solution().nextPermutation([1,3,2]))
