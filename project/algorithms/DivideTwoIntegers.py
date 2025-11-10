@@ -10,16 +10,15 @@ class Solution:
         
         sign = -1 if (dividend < 0) ^ (divisor < 0) else 1
         
-        n, d = abs(dividend)
+        n = abs(dividend)
         d = abs(divisor)
         ans = 0
 
         while n >= d:
             p = 0
-            while n >= (d << p):
+            while n >= (d << p+1):
                 p += 1
             
-            p -= 1
             n -= (d << p)
             ans += (1 << p)
 
