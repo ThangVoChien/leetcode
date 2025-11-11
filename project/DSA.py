@@ -1,4 +1,4 @@
-from algorithms.NextPermutation import *
+from algorithms.SearchInRotatedSortedArray import *
 from dataStructures import *
 
-print(Solution().nextPermutation([1,3,2]))
+print(Solution().search([4,5,6,7,0,1,2], 0))
