@@ -6,22 +6,18 @@ class Solution:
         if target == k:
             return 0
 
-        rotated = True
+        rotated = target < k
 
         start = 0
         end = len(nums)-1
-        while start < end:
-            mid = (start - end) // 2
-            print(nums[mid])
+        while start <= end:
+            mid = (end + start) // 2
+            r = nums[mid] < k
 
-            if nums[mid] >= k:
-                rotated = True
-            else:
-                rotated = False
-
-            if nums[mid] == k:
+            if nums[mid] == target:
                 return mid
-            elif (nums[mid] > target and not rotated) or (nums[mid] < target and rotated):
+            elif (rotated == r and target < nums[mid]) or (rotated != r and target > nums[mid]):
+                print(rotated, r)
                 end = mid - 1
             else:
                 start = mid + 1
