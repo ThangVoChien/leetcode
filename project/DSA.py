@@ -1,4 +1,4 @@
-from algorithms.SearchInRotatedSortedArray import *
+from algorithms.FindFirstAndLastPositionOfElementInSortedArray import *
 from dataStructures import *
 
-print(Solution().search2([3,1,2,2,2], 1))
+print(Solution().searchRange([], 0))
