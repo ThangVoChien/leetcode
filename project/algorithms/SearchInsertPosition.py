@@ -10,7 +10,7 @@ class Solution:
                 return mid
             elif nums[mid] < target:
                 if mid == len(nums)-1 or nums[mid+1] > target:
-                    return mid + 1
+                    return mid+1
                 else:
                     start+=1
             else:
