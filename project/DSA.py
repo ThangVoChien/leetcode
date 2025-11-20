@@ -1,4 +1,4 @@
-from algorithms.CountAndSay import *
+from algorithms.CombinationSum import *
 from dataStructures import *
 
-print(Solution().countAndSay(1))
+print(Solution().combinationSum([2], 1))
