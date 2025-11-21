@@ -66,3 +66,32 @@ class Solution:
                 i+=1
 
         return sol
+    
+    def combinationSum3(self, k: int, n: int) -> List[List[int]]:
+        sol = []
+
+        def backtrack(arr: List[int], sum, count, i):
+            if i == 10 or sum + i > n - i * (k - count) - (k - count):
+                return False
+            
+            arr.append(i)
+            sum += i
+
+            if sum >= n:
+                if sum == n and count == k:
+                    sol.append(arr.copy())
+
+                arr.pop()
+                return False
+            else:
+                while backtrack(arr, sum, count+1, i+1):
+                    i+=1
+                
+                arr.pop()
+                return True
+
+        i = 1
+        while backtrack([], 0, 1, i):
+            i+=1
+
+        return sol
