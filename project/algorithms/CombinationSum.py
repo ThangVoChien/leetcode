@@ -1,4 +1,5 @@
 from typing import List
+from math import factorial
 
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
@@ -95,3 +96,24 @@ class Solution:
             i+=1
 
         return sol
+    
+    def combinationSum4(self, nums: List[int], target: int) -> int:
+        dict = {}
+
+        def dynamic(num):
+            if num in dict:
+                return dict[num]
+
+            sum = 0
+            for n in nums:
+                if n >= num:
+                    if n == num:
+                        sum+=1
+                    break
+                sum += dynamic(num - n)
+
+            dict[num] = sum
+            return sum
+
+        nums.sort()
+        return dynamic(target)

@@ -1,4 +1,4 @@
 from algorithms.CombinationSum import *
 from dataStructures import *
 
-print(Solution().combinationSum3(4, 1))
+print(Solution().combinationSum4([9], 3))
