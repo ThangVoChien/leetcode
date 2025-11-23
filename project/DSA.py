@@ -1,4 +1,4 @@
-from algorithms.CombinationSum import *
+from algorithms.MultiplyStrings import *
 from dataStructures import *
 
-print(Solution().combinationSum4([9], 3))
+print(Solution().multiply("123", "456"))
