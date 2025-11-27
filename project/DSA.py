@@ -1,4 +1,4 @@
-from algorithms.MultiplyStrings import *
+from algorithms.NextPermutation import *
 from dataStructures import *
 
-print(Solution().multiply("123", "456"))
+print(Solution().nextPermutation([1,2,3]))
