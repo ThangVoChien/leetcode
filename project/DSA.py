@@ -1,4 +1,4 @@
-from algorithms.NextPermutation import *
+from algorithms.Permutations import *
 from dataStructures import *
 
-print(Solution().nextPermutation([1,2,3]))
+print(Solution().permute([1,2,3]))
