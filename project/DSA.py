@@ -1,4 +1,4 @@
 from algorithms.Permutations import *
 from dataStructures import *
 
-print(Solution().permute([1,2,3]))
+print(Solution().permuteUnique([1,2,3]))
