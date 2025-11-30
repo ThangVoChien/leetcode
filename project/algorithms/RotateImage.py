@@ -37,5 +37,3 @@ class Solution:
             matrix[i][leng-1-j] = t
 
             j+=1
-
-        print(matrix)

@@ -1,4 +1,4 @@
-from algorithms.RotateImage import *
+from algorithms.GroupAnagrams import *
 from dataStructures import *
 
-print(Solution().rotate([[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]))
+print(Solution().groupAnagrams(["a"]))
