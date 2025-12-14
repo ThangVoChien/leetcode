@@ -1,4 +1,4 @@
-from algorithms.GroupAnagrams import *
+from algorithms.MaximumSubarray import *
 from dataStructures import *
 
-print(Solution().groupAnagrams(["a"]))
+print(Solution().maxSubArray([1,2,-1]))
