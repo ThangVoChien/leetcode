@@ -1,4 +1,4 @@
-from algorithms.MaximumSubarray import *
+from algorithms.SpiralMatrix import *
 from dataStructures import *
 
-print(Solution().maxSubArray([1,2,-1]))
+print(Solution().spiralOrder([[2,5],[8,4],[0,-1]]))
