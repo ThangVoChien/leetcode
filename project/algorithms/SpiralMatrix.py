@@ -35,3 +35,36 @@ class Solution:
                     if next == -1:
                         iBound+=1
                     next = -next
+
+    def generateMatrix(self, n: int) -> List[List[int]]:
+        sol = [[0] * n for _ in range(n)]
+
+        iBound = 1
+        jBound = 1
+        next = 1
+        horizontal = True
+
+        i = 0
+        j = 0
+        x = 1
+        while True:
+            sol[i][j] = x
+            x+=1
+
+            if horizontal:
+                j += next
+                if j > n - iBound or j < iBound - 1:
+                    return sol
+                if (next == 1 and j == (n - iBound)) or (next == -1 and j == (iBound - 1)):
+                    horizontal = False
+                    if next == -1:
+                        jBound+=1
+            else:
+                i += next
+                if i > n - jBound or i < jBound - 1:
+                    return sol
+                if (next == 1 and i == (n - jBound)) or (next == -1 and i == (jBound - 1)):
+                    horizontal = True
+                    if next == -1:
+                        iBound+=1
+                    next = -next
