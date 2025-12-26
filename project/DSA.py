@@ -1,4 +1,4 @@
 from algorithms.SpiralMatrix import *
 from dataStructures import *
 
-print(Solution().generateMatrix(2))
+print(Solution().spiralMatrixIII(3, 3, 1, 1))

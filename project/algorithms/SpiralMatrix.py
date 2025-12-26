@@ -68,3 +68,49 @@ class Solution:
                     if next == -1:
                         iBound+=1
                     next = -next
+    
+    def spiralMatrixIII(self, rows: int, cols: int, rStart: int, cStart: int) -> List[List[int]]:
+        sol = []
+        
+        r = 1
+        next = 1
+        horizontal = True
+
+        i = rStart
+        j = cStart
+        x = 0
+        while True:
+            sol.append([i, j])
+
+            if horizontal:
+                if abs(j + next - cStart) <= r:
+                    j += next
+                else:
+                    horizontal = False
+                    i += next
+            else:
+                if abs(i + next - rStart) <= r:
+                    i += next
+                else:
+                    if next == -1:
+                        r+=1
+                    next = -next
+                    horizontal = True
+                    j += next
+
+            while i >= rows or j >= cols:
+                if horizontal:
+                    if abs(j + next - cStart) <= r:
+                        j += next
+                    else:
+                        horizontal = False
+                        i += next
+                else:
+                    if abs(i + next - rStart) <= r:
+                        i += next
+                    else:
+                        if next == -1:
+                            r+=1
+                        next = -next
+                        horizontal = True
+                        j += next
