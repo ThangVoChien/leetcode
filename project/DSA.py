@@ -1,4 +1,4 @@
-from algorithms.SpiralMatrix import *
+from algorithms.LastStoneWeight import *
 from dataStructures import *
 
-print(Solution().spiralMatrixIII(3, 3, 1, 1))
+print(Solution().lastStoneWeight([1]))

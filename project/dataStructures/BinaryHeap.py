@@ -1,19 +1,17 @@
+from abc import ABC, abstractmethod
 from typing import List
 
-class BinaryHeap:
+class BinaryHeap(ABC):
     def __str__(self):
         return str(self.vals)
 
+    @abstractmethod
     def append(self, val: int):
-        self.vals.append(val)
+        pass
 
+    @abstractmethod
     def pop(self):
-        val = self.vals[0]
-
-        self.vals[0] = self.vals[len(self.vals)-1]
-        self.vals.pop()
-
-        return val
+        pass
 
     def parent(self, i):
         return int((i - 1) / 2) if i > 0 else -1
@@ -36,7 +34,7 @@ class MinHeap(BinaryHeap):
         self.vals = []
 
     def append(self, val: int):
-        super().append(val)
+        self.vals.append(val)
 
         i = len(self.vals)-1
         while i != 0 and self.vals[self.parent(i)] > self.vals[i]:
@@ -45,7 +43,10 @@ class MinHeap(BinaryHeap):
             i = parent
 
     def pop(self):
-        val = super().pop()
+        val = self.vals[0]
+
+        self.vals[0] = self.vals[len(self.vals)-1]
+        self.vals.pop()
 
         i = 0
         while True:
@@ -74,7 +75,7 @@ class MaxHeap(BinaryHeap):
         self.vals = []
 
     def append(self, val: int):
-        super().append(val)
+        self.vals.append(val)
 
         i = len(self.vals)-1
         while i != 0 and self.vals[self.parent(i)] < self.vals[i]:
@@ -83,7 +84,10 @@ class MaxHeap(BinaryHeap):
             i = parent
 
     def pop(self):
-        val = super().pop()
+        val = self.vals[0]
+
+        self.vals[0] = self.vals[len(self.vals)-1]
+        self.vals.pop()
 
         i = 0
         while True:
@@ -107,13 +111,13 @@ class MaxHeap(BinaryHeap):
 
         return val
 
-def minHeap(heap: List = []):
+def minHeap(heap: List):
     min = MinHeap()
     for h in heap:
         min.append(h)
     return min
 
-def maxHeap(heap: List = []):
+def maxHeap(heap: List):
     max = MaxHeap()
     for h in heap:
         max.append(h)

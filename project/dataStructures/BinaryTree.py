@@ -26,10 +26,7 @@ class TreeNode:
         s += ']'
         return s
 
-def binaryTree(tree: List = []):
-    if len(tree) == 0:
-        return
-    
+def binaryTree(tree: List):
     root = TreeNode(val=tree[0])
     list = []
     list.append(root)
@@ -38,7 +35,7 @@ def binaryTree(tree: List = []):
     while len(list) != 0:
         node = list.pop()
 
-        if len(tree) > i:
+        if i < len(tree):
             if tree[i] != None:
                 left = TreeNode(val=tree[i])
                 node.left = left
@@ -47,7 +44,7 @@ def binaryTree(tree: List = []):
         else:
             break
 
-        if len(tree) > i:
+        if i < len(tree):
             if tree[i] != None:
                 right = TreeNode(val=tree[i])
                 node.right = right

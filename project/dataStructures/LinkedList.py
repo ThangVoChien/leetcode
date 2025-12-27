@@ -19,16 +19,19 @@ class ListNode:
         s += ']'
         return s
 
-def linkedList(list: List = []):
-    if len(list) == 0:
-        return
-
+def linkedList(list: List, pos = -1):
     head = ListNode(val=list[0])
-    node = head
+    node = cycle = head
 
     for i in range(1, len(list)):
         next = ListNode(val=list[i])
         node.next = next
         node = next
+
+        if i == pos:
+            cycle = next
+
+    if pos != -1:
+        node.next = cycle
 
     return head
