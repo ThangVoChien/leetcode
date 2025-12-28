@@ -30,7 +30,7 @@ class Solution:
             for c in choice:
                 sol = greedy(map[c])
                 visited[map[c]] = sol
-                if sol != 0:
+                if sol:
                     return True
             return False
 
@@ -66,3 +66,32 @@ class Solution:
             return 0
 
         return greedy(0)-1
+    
+    def canReach(self, arr: List[int], start: int) -> bool:
+        visited = {}
+
+        def greedy(n):
+            if n in visited:
+                return visited[n]
+            else:
+                visited[n] = False
+
+            num = arr[n]
+            if num == 0:
+                return True
+
+            choice = [n + num, n - num]
+            choice.sort(reverse=True)
+
+            for i in choice:
+                if i >= len(arr) or i < 0:
+                    continue
+
+                sol = greedy(i)
+                visited[i] = sol
+
+                if sol:
+                    return True
+            return False
+
+        return greedy(start)
