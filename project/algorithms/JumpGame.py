@@ -5,8 +5,6 @@ class Solution:
         visited = {}
 
         def greedy(n):
-            print(n, nums[n])
-
             if n in visited:
                 return visited[n]
             if n == len(nums)-1:
@@ -32,8 +30,39 @@ class Solution:
             for c in choice:
                 sol = greedy(map[c])
                 visited[map[c]] = sol
-                if sol:
+                if sol != 0:
                     return True
             return False
 
         return greedy(0)
+    
+    def jump(self, nums: List[int]) -> int:
+        visited = {}
+
+        def greedy(n):
+            if n in visited:
+                return visited[n]
+            if n == len(nums)-1:
+                return 1
+
+            choice = []
+            num = nums[n]
+            if num == 0:
+                return 0
+
+            for i in range(n + 1, n + num + 1):
+                if i >= len(nums):
+                    break
+                if i == len(nums)-1:
+                    return 2
+                choice.append((nums[i]+i, i))
+
+            choice.sort(reverse=True)
+            for c in choice:
+                sol = greedy(c[1])
+                visited[c[1]] = sol
+                if sol != 0:
+                    return 1 + sol
+            return 0
+
+        return greedy(0)-1
