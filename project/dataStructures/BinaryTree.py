@@ -11,19 +11,21 @@ class TreeNode:
             return '[]'
 
         list = []
+        list.append(self)
 
         s = '['
-        list.append(self)
         while len(list) != 0:
             node = list.pop()
-            s += str(node.val)
             if node.left != None:
                 list.append(node.left)
             if node.right != None:
                 list.append(node.right)
+
+            s += str(node.val)
             if len(list) != 0:
                 s += ', '
         s += ']'
+
         return s
 
 def binaryTree(tree: List):

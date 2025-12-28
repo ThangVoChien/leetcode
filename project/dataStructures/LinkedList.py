@@ -1,27 +1,41 @@
 from typing import List
 
 class ListNode:
-    def __init__(self, val=0, next=None):
+    def __init__(self, val=0, next=None, cycle=False):
         self.val = val
         self.next = next
+        self.__cycle = cycle
 
     def __str__(self):
         if self == None:
             return '[]'
         
-        s = '['
         node = self
-        while node != None:
+        cycle = None
+        i = 0
+
+        s = '['
+        while node != None and node != cycle:
+            if node._ListNode__cycle:
+                cycle = node
+            if cycle == None:
+                i+=1
+
             s += str(node.val)
-            if node.next != None:
-                s += ', '
             node = node.next
+            if node != None and node != cycle:
+                s += ', '
         s += ']'
+
+        if cycle != None:
+            s += ', pos = ' + str(i)
+
         return s
 
 def linkedList(list: List, pos = -1):
     head = ListNode(val=list[0])
-    node = cycle = head
+    node = head
+    cycle = None
 
     for i in range(1, len(list)):
         next = ListNode(val=list[i])
@@ -30,8 +44,9 @@ def linkedList(list: List, pos = -1):
 
         if i == pos:
             cycle = next
+            cycle._ListNode__cycle = True
 
-    if pos != -1:
+    if cycle != None:
         node.next = cycle
 
     return head
