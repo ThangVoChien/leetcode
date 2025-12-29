@@ -1,4 +1,4 @@
-from algorithms.JumpGame import *
+from algorithms.InsertInterval import *
 from dataStructures import *
 
-print(Solution().canReach([3,0,2,1,2], 2))
+print(Solution().insert([[2,3],[5,7]], [0,6]))
