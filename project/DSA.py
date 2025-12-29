@@ -1,4 +1,4 @@
-from algorithms.InsertInterval import *
+from algorithms.MergeIntervals import *
 from dataStructures import *
 
-print(Solution().insert([[2,3],[5,7]], [0,6]))
+print(Solution().merge([[1,4],[0,2],[3,5]]))
