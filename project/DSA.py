@@ -1,4 +1,4 @@
-from algorithms.LengthOfLastWord import *
+from algorithms.RotateList import *
 from dataStructures import *
 
-print(Solution().lengthOfLastWord("luffy is still joyboy"))
+print(Solution().rotateRight(linkedList([1,2,3,4,5]), 2))
