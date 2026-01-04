@@ -12,6 +12,5 @@ class Solution:
                 return visited[i][j]
             
             visited[i][j] = min(dynamic(i+1, j) + grid[i][j], dynamic(i, j+1) + grid[i][j])
-            print(visited[i][j])
             return visited[i][j]
         return dynamic(0, 0)
