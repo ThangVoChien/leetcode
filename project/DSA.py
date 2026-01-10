@@ -1,4 +1,4 @@
-from algorithms.PlusOne import *
+from algorithms.AddBinary import *
 from dataStructures import *
 
-print(Solution().plusOne([9]))
+print(Solution().addBinary("1010", "1011"))

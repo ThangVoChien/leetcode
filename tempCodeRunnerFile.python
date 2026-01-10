@@ -1,0 +1,39 @@
+import json
+import requests
+
+# ===== 1. Load list =====
+files = [
+    {
+        "name": "Chapter_2-Overview_Of_The_UML_Notation.pdf",
+        "url": "https://drive.google.com/uc?id=1ICvxiwZeUeSWer8-XrQyq_phXp5egIEP&amp;export=download?sv=2025-05-05&spr=https&se=2026-01-06T07%3A18%3A12Z&sr=b&sp=r&sig=UTE2ktfjGLMoRqVaOrrqMvRquaIHUR8T2525Xb3JZpM%3D"
+    },
+    {
+        "name": "Chapter_1-Introduction.pdf",
+        "url": "https://drive.google.com/uc?id=1SIb6TB6Xqq6yBHltYiP01o3SCFrwWg-N&amp;export=download?sv=2025-05-05&spr=https&se=2026-01-06T07%3A18%3A12Z&sr=b&sp=r&sig=9B3xS%2Fj02n0046F7DV%2BAsUjAetmG9PuiuzLMxAllD7Q%3D"
+    },
+    {
+        "name": "Chapter_0-Course_Introduction.pdf",
+        "url": "https://drive.google.com/uc?id=1x1PiVAjujtEVhWU2xqg5QZ14uIoJvk4p&amp;export=download?sv=2025-05-05&spr=https&se=2026-01-06T07%3A18%3A12Z&sr=b&sp=r&sig=Pto0fPM0pa9s5%2BlANJK%2B0yjFxUwer8ufg5%2BXXIXdca8%3D"
+    }
+]
+
+session = requests.Session()
+
+# ===== 3. Download =====
+for item in files:
+    name = item["name"]
+    url = item["url"]
+
+    print("⬇️ Downloading:", name)
+
+    r = session.get(url, stream=True, allow_redirects=True)
+    if r.status_code != 200:
+        print("❌ Failed:", r.status_code)
+        continue
+
+    with open(name, "wb") as f:
+        for chunk in r.iter_content(8192):
+            if chunk:
+                f.write(chunk)
+
+    print("✅ Saved:", name)
