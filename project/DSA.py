@@ -1,4 +1,4 @@
-from algorithms.AddBinary import *
+from algorithms.ClimbingStairs import *
 from dataStructures import *
 
-print(Solution().addBinary("1010", "1011"))
+print(Solution().climbStairs(3))
