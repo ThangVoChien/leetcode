@@ -1,4 +1,4 @@
-from algorithms.ClimbingStairs import *
+from algorithms.SimplifyPath import *
 from dataStructures import *
 
-print(Solution().climbStairs(3))
+print(Solution().simplifyPath("/.../a/../b/c/../d/./"))
