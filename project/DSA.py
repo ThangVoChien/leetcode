@@ -1,4 +1,4 @@
-from algorithms.SimplifyPath import *
+from algorithms.EditDistance import *
 from dataStructures import *
 
-print(Solution().simplifyPath("/.../a/../b/c/../d/./"))
+print(Solution().minDistance("intention", "execution"))
