@@ -22,12 +22,12 @@ class Solution:
     
     def searchMatrix2(self, matrix: List[List[int]], target: int) -> bool:
         def divideConquer(startI, endI, startJ, endJ):
-            print(startI, endI, startJ, endJ)
             if startI > endI or startJ > endJ:
                 return False
             if startI == endI and startJ == endJ:
-                mid = (startI + endI) // 2
-                return matrix[mid][mid] == target
+                midI = (startI + endI) // 2
+                midJ = (startJ + endJ) // 2
+                return matrix[midI][midJ] == target
 
             midI = (startI + endI) // 2
             midJ = (startJ + endJ) // 2
@@ -35,11 +35,7 @@ class Solution:
             if matrix[midI][midJ] == target:
                 return True
             elif matrix[midI][midJ] > target:
-                return divideConquer(startI, midI, startJ, midJ)
+                return divideConquer(startI, midI-1, startJ, endJ) or divideConquer(midI, endI, startJ, midJ-1)
             else:
-                if startI == endI:
-                    return divideConquer(startI, midI, midJ+1, endJ)
-                elif startJ == endJ:
-                    return divideConquer(midI+1, endI, startJ, endJ)
                 return divideConquer(midI+1, endI, startJ, endJ) or divideConquer(startI, midI, midJ+1, endJ)
         return divideConquer(0, len(matrix)-1, 0, len(matrix[0])-1)
