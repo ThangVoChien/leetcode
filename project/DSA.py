@@ -1,4 +1,4 @@
-from algorithms.Subsets import *
+from algorithms.WordSearch import *
 from dataStructures import *
 
-print(Solution().subsets([0]))
+print(Solution().exist([["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], "ABCCED"))
