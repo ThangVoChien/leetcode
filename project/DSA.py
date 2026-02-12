@@ -1,4 +1,4 @@
-from algorithms.WordSearch import *
+from algorithms.RemoveDuplicatesFromSortedList import *
 from dataStructures import *
 
-print(Solution().exist([["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], "ABCCED"))
+print(Solution().deleteDuplicates(linkedList([1,1,1])))
