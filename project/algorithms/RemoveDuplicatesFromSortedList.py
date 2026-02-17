@@ -11,3 +11,20 @@ class Solution:
             curr = curr.next
 
         return head
+    
+    def deleteDuplicates2(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        h = ListNode(None, head)
+        curr = head
+
+        prev = h
+        while curr != None:
+            p = prev
+            while curr != None and (p.val == curr.val or (curr.next != None and curr.val == curr.next.val)):
+                p = curr
+                curr = curr.next
+            prev.next = curr
+            prev = prev.next
+            if curr != None:
+                curr = curr.next
+
+        return h.next
