@@ -1,4 +1,6 @@
-from algorithms.RemoveDuplicatesFromSortedList import *
+from algorithms.MergeSortedArray import *
 from dataStructures import *
 
-print(Solution().deleteDuplicates2(linkedList([1,2,3,3,4,4,5])))
+nums = [0]
+Solution().merge(nums, 0, [1], 1)
+print(nums)
