@@ -14,8 +14,9 @@ class Solution:
                 r = nums1[i]
                 nums1[i] = t
 
-                if j < n and (nums2[j] < r or r == 0):
+                while j < n and (nums2[j] < r or r == 0):
                     t = r
                     r = nums2[j]
                     nums2[j] = t
-                    j+=1
+                    if nums2[j] == 0:
+                        j+=1
