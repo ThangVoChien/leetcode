@@ -5,18 +5,26 @@ class Solution:
         if n == 0:
             return
 
-        j = 1
-        r = nums2[0]
+        j = 0
+        r = []
+        l = m
 
         for i in range(m+n):
-            if nums1[i] > r or nums1[i] == 0:
-                t = r
-                r = nums1[i]
-                nums1[i] = t
+            while j < n:
+                if nums2[j] < nums1[i]:
+                    r.append(nums2[j])
+                    j+=1
+                else:
+                    break
 
-                while j < n and (nums2[j] < r or r == 0):
-                    t = r
-                    r = nums2[j]
-                    nums2[j] = t
-                    if nums2[j] == 0:
-                        j+=1
+            if len(r) != 0 or i >= l:
+                if nums1[i] != 0 or (nums1[i] == 0 and i < l):
+                    r.append(nums1[i])
+                else:
+                    l+=1
+
+                if len(r) != 0:
+                    nums1[i] = r.pop(0)
+                elif j < n:
+                    nums1[i] = nums2[j]
+                    j+=1
