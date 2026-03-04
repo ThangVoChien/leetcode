@@ -1,4 +1,4 @@
-from algorithms.DecodeWays import *
+from algorithms.RestoreIPAddresses import *
 from dataStructures import *
 
-print(Solution().numDecodings("2611055971756562"))
+print(Solution().restoreIpAddresses("101023"))
