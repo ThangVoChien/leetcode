@@ -33,6 +33,9 @@ class ListNode:
         return s
 
 def linkedList(list: List, pos = -1):
+    if list == None or len(list) == 0:
+        return None
+    
     head = ListNode(val=list[0])
     node = head
     cycle = None

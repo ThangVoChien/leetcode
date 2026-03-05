@@ -29,13 +29,16 @@ class TreeNode:
         return s
 
 def binaryTree(tree: List):
+    if tree == None or len(tree) == 0:
+        return None
+    
     root = TreeNode(val=tree[0])
     list = []
     list.append(root)
     
     i = 1
     while len(list) != 0:
-        node = list.pop()
+        node = list.pop(0)
 
         if i < len(tree):
             if tree[i] != None:

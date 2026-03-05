@@ -1,4 +1,4 @@
-from algorithms.RestoreIPAddresses import *
+from algorithms.BinaryTreeInorderTraversal import *
 from dataStructures import *
 
-print(Solution().restoreIpAddresses("101023"))
+print(Solution().inorderTraversal(binaryTree([])))

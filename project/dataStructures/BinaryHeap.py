@@ -112,13 +112,23 @@ class MaxHeap(BinaryHeap):
         return val
 
 def minHeap(heap: List):
+    if heap == None or len(heap) == 0:
+        return None
+    
     min = MinHeap()
+
     for h in heap:
         min.append(h)
+    
     return min
 
 def maxHeap(heap: List):
+    if heap == None or len(heap) == 0:
+        return None
+    
     max = MaxHeap()
+
     for h in heap:
         max.append(h)
+    
     return max
