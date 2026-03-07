@@ -1,6 +1,7 @@
 class Solution:
     def isInterleave(self, s1: str, s2: str, s3: str) -> bool:
         map = {}
+        
         def dynamic(i, j, k):
             if k == len(s3):
                 return i == len(s1) and j == len(s2)
