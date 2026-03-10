@@ -1,4 +1,4 @@
-from algorithms.ValidateBinarySearchTree import *
+from algorithms.RecoverBinarySearchTree import *
 from dataStructures import *
 
-print(Solution().isValidBST(binaryTree([2147483647])))
+print(Solution().recoverTree(binaryTree([1,3,null,null,2])))
