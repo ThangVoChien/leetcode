@@ -1,4 +1,4 @@
-from algorithms.RecoverBinarySearchTree import *
+from algorithms.SymmetricTree import *
 from dataStructures import *
 
-print(Solution().recoverTree(binaryTree([1,3,null,null,2])))
+print(Solution().isSymmetric(binaryTree([1,2,2,null,3,null,3])))
