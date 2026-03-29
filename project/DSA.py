@@ -1,4 +1,4 @@
-from algorithms.BinaryTreeZigzagLevelOrderTraversal import *
+from algorithms.NQueens import *
 from dataStructures import *
 
-print(Solution().zigzagLevelOrder(binaryTree([])))
+print(Solution().solveNQueens(1))
