@@ -30,3 +30,29 @@ class Solution:
         generate(0)
 
         return sol
+    
+    def totalNQueens(self, n: int) -> int:
+        self.sol = 0
+
+        self.hor = [True for _ in range(n)]
+        self.diaI = [True for _ in range(2*n-1)]
+        self.diaJ = [True for _ in range(2*n-1)]
+
+        def generate(i):
+            for j in range(n):
+                if self.hor[j] and self.diaI[n-1-i+j] and self.diaJ[j+i]:
+                    self.hor[j] = False
+                    self.diaI[n-1-i+j] = False
+                    self.diaJ[j+i] = False
+
+                    if i == n-1:
+                        self.sol+=1
+                    else:
+                        generate(i+1)
+
+                    self.hor[j] = True
+                    self.diaI[n-1-i+j] = True
+                    self.diaJ[j+i]  = True
+        generate(0)
+
+        return self.sol

@@ -1,4 +1,4 @@
 from algorithms.NQueens import *
 from dataStructures import *
 
-print(Solution().solveNQueens(1))
+print(Solution().totalNQueens(1))
