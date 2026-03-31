@@ -1,4 +1,4 @@
-from algorithms.NQueens import *
+from algorithms.ConstructBinaryTreeFromPreorderAndInorderTraversal import *
 from dataStructures import *
 
-print(Solution().totalNQueens(1))
+print(Solution().buildTree([3,9,20,15,7], [9,3,15,20,7]))

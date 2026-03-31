@@ -15,7 +15,7 @@ class TreeNode:
 
         s = '['
         while len(list) != 0:
-            node = list.pop()
+            node = list.pop(0)
             if node.left != None:
                 list.append(node.left)
             if node.right != None:
