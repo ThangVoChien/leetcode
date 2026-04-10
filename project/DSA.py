@@ -1,4 +1,4 @@
-from algorithms.ConvertSortedArrayToBinarySearchTree import *
+from algorithms.ConvertSortedListToBinarySearchTree import *
 from dataStructures import *
 
-print(Solution().sortedArrayToBST([1,3]))
+print(Solution().sortedListToBST(linkedList([])))
