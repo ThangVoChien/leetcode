@@ -1,4 +1,4 @@
-from algorithms.ConstructBinaryTreeFromInorderAndPostorderTraversal import *
+from algorithms.ConvertSortedArrayToBinarySearchTree import *
 from dataStructures import *
 
-print(Solution().buildTree([-1], [-1]))
+print(Solution().sortedArrayToBST([1,3]))

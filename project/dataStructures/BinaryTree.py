@@ -14,16 +14,21 @@ class TreeNode:
         list.append(self)
 
         s = '['
+        n = ''
         while len(list) != 0:
             node = list.pop(0)
-            if node.left != None:
+
+            if node == None:
+                n += ', null, '
+            else:
+                s += n + str(node.val)
+                n = ''
+
                 list.append(node.left)
-            if node.right != None:
                 list.append(node.right)
 
-            s += str(node.val)
-            if len(list) != 0:
-                s += ', '
+                if len(list) != 0 and list[0] != None:
+                    s += ', '
         s += ']'
 
         return s
