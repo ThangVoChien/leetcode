@@ -1,4 +1,4 @@
-from algorithms.MinimumDepthOfBinaryTree import *
+from algorithms.PathSum import *
 from dataStructures import *
 
-print(Solution().minDepth(binaryTree([3,9,20,null,null,15,7])))
+print(Solution().hasPathSum(binaryTree([-2,null,-3]), -5))
