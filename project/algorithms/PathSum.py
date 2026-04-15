@@ -36,3 +36,21 @@ class Solution:
         dfs(root, 0, [])
         
         return self.sol
+
+    def pathSum3(self, root: Optional[TreeNode], targetSum: int) -> int:
+        self.map = {0: 1}
+
+        def dfs(node, sum):
+            if node is None:
+                return 0
+            
+            sum += node.val
+            sol = self.map.get(sum - targetSum, 0)
+            self.map[sum] = self.map.get(sum, 0) + 1
+
+            sol += dfs(node.left, sum)
+            sol += dfs(node.right, sum)
+
+            self.map[sum] -= 1
+            return sol
+        return dfs(root, 0)
