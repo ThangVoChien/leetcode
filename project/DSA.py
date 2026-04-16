@@ -1,4 +1,4 @@
-from algorithms.PathSum import *
+from algorithms.FlattenBinaryTreeToLinkedList import *
 from dataStructures import *
 
-print(Solution().pathSum3(binaryTree([5,4,8,11,null,13,4,7,2,null,null,5,1]), 22))
+print(Solution().flatten(binaryTree([1,2,null,3])))
