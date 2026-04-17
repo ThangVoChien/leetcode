@@ -1,4 +1,4 @@
-from algorithms.FlattenBinaryTreeToLinkedList import *
+from algorithms.PopulatingNextRightPointersInEachNode import *
 from dataStructures import *
 
-print(Solution().flatten(binaryTree([1,2,null,3])))
+print(Solution().connect(binaryTree([])))

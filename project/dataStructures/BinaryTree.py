@@ -1,10 +1,11 @@
 from typing import List
 
 class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
+    def __init__(self, val=0, left=None, right=None, next=None):
         self.val = val
         self.left = left
         self.right = right
+        self.next = next
 
     def __str__(self):
         if self == None:
@@ -40,6 +41,7 @@ def binaryTree(tree: List):
     root = TreeNode(val=tree[0])
     list = []
     list.append(root)
+    list.append(None)
     
     i = 1
     while len(list) != 0:
@@ -51,8 +53,6 @@ def binaryTree(tree: List):
                 node.left = left
                 list.append(left)
             i+=1
-        else:
-            break
 
         if i < len(tree):
             if tree[i] != None:
@@ -60,7 +60,11 @@ def binaryTree(tree: List):
                 node.right = right
                 list.append(right)
             i+=1
-        else:
-            break
+
+        node.next = list[0]
+        if list[0] == None:
+            list.pop(0)
+            if len(list) != 0:
+                list.append(None)
 
     return root
