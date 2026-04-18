@@ -1,4 +1,4 @@
-from algorithms.PopulatingNextRightPointersInEachNode import *
+from algorithms.PascalsTriangle import *
 from dataStructures import *
 
-print(Solution().connect(binaryTree([])))
+print(Solution().generate(1))
