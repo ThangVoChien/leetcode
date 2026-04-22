@@ -1,4 +1,4 @@
-from algorithms.PascalsTriangle import *
+from algorithms.Triangle import *
 from dataStructures import *
 
-print(Solution().getRow(1))
+print(Solution().minimumTotal([[2],[3,4],[6,5,7],[4,1,8,3]]))

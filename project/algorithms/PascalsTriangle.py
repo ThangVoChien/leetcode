@@ -19,13 +19,8 @@ class Solution:
         return sol
     
     def getRow(self, rowIndex: int) -> List[int]:
-        if rowIndex == 1:
-            return [1]
-
-        self.sol = []
-
         def dynamic(row):
-            if row == 1:
+            if row == 0:
                 return [1]
 
             pascal = dynamic(row-1)
@@ -37,9 +32,6 @@ class Solution:
                 p.append(s)
                 s = j
             p.append(1)
-            self.sol.append(p.copy())
 
             return p
-        dynamic(rowIndex)
-
-        return self.sol
+        return dynamic(rowIndex)
