@@ -1,4 +1,4 @@
-from algorithms.Triangle import *
+from algorithms.BestTimeToBuyAndSellStock import *
 from dataStructures import *
 
-print(Solution().minimumTotal([[2],[3,4],[6,5,7],[4,1,8,3]]))
+print(Solution().maxProfit2([7,6,4,3,1]))
