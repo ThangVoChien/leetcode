@@ -1,4 +1,4 @@
-from algorithms.BestTimeToBuyAndSellStock import *
+from algorithms.SumRootToLeafNumbers import *
 from dataStructures import *
 
-print(Solution().maxProfit2([7,6,4,3,1]))
+print(Solution().sumNumbers(binaryTree([4,9,0,5,1])))
