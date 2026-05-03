@@ -1,4 +1,4 @@
 from algorithms.MajorityElement import *
 from dataStructures import *
 
-print(Solution().majorityElement([3,2,3]))
+print(Solution().majorityElement2([3,2,2,2,3]))
