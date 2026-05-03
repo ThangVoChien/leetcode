@@ -1,4 +1,4 @@
-from algorithms.SumRootToLeafNumbers import *
+from algorithms.MajorityElement import *
 from dataStructures import *
 
-print(Solution().sumNumbers(binaryTree([4,9,0,5,1])))
+print(Solution().majorityElement([3,2,3]))
