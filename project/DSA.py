@@ -1,4 +1,4 @@
-from algorithms.ReverseBits import *
+from algorithms.NumberOf1Bits import *
 from dataStructures import *
 
-print(Solution().reverseBits(2147483644))
+print(Solution().hammingWeight(2147483645))
