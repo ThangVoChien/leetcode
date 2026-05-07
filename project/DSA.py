@@ -1,4 +1,4 @@
-from algorithms.NumberOf1Bits import *
+from algorithms.LongestPalindrome import *
 from dataStructures import *
 
-print(Solution().hammingWeight(2147483645))
+print(Solution().longestPalindrome("bb"))
