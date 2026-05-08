@@ -1,4 +1,4 @@
-from algorithms.AssignCookies import *
+from algorithms.BinaryTreePaths import *
 from dataStructures import *
 
-print(Solution().findContentChildren([1,2], [1,2,3]))
+print(Solution().binaryTreePaths(binaryTree([])))
