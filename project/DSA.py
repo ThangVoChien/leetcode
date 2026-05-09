@@ -1,4 +1,4 @@
-from algorithms.BinaryTreePaths import *
+from algorithms.RelativeRanks import *
 from dataStructures import *
 
-print(Solution().binaryTreePaths(binaryTree([])))
+print(Solution().findRelativeRanks([5,4,3,2,1]))
