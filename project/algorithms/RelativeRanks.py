@@ -3,12 +3,12 @@ import heapq
 
 class Solution:
     def findRelativeRanks(self, score: List[int]) -> List[str]:
-        heap = score
+        sol = []
+
+        heap = score.copy()
         heap.sort(reverse=True)
 
         map = {v: k for k, v in enumerate(heap)}
-
-        sol = []
         for s in score:
             m = map[s]
             if m == 0:
@@ -18,7 +18,7 @@ class Solution:
             elif m == 2:
                 m = "Bronze Medal"
             else:
-                m = str(m)
-            sol.append(map[s])
+                m = str(m+1)
+            sol.append(m)
 
-        return map
+        return sol

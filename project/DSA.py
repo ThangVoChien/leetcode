@@ -1,4 +1,4 @@
-from algorithms.RelativeRanks import *
+from algorithms.IslandPerimeter import *
 from dataStructures import *
 
-print(Solution().findRelativeRanks([5,4,3,2,1]))
+print(Solution().islandPerimeter([[1,0]]))
