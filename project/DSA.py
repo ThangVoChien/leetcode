@@ -1,4 +1,4 @@
-from algorithms.IslandPerimeter import *
+from algorithms.NextGreaterElement import *
 from dataStructures import *
 
-print(Solution().islandPerimeter([[1,0]]))
+print(Solution().nextGreaterElement([4,1,2,0], [3,4,2,0,1]))
