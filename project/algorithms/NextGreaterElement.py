@@ -26,3 +26,28 @@ class Solution:
             sol.append(map[n])
 
         return sol
+    
+    def nextGreaterElements(self, nums: List[int]) -> List[int]:
+        sol = [-1 for _ in nums]
+        stack = []
+
+        i = len(nums)-1
+        max = float("-inf")
+        j = -1
+        while True:
+            n = nums[i]
+            if max == n and j == i:
+                return sol
+            while stack and stack[-1][0] <= n:
+                stack.pop()
+            if max < n:
+                max = n
+                j = i
+
+            sol[i] = -1 if not stack else stack[-1][0]
+            stack.append((n, i))
+
+            if i == 0:
+                i = len(nums)-1
+            else:
+                i-=1
