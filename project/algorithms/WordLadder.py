@@ -1,4 +1,5 @@
 from collections import deque
+import string
 from typing import List
 
 class Solution:
