@@ -1,4 +1,4 @@
-from algorithms.NextGreaterElement import *
+from algorithms.FindTheTownJudge import *
 from dataStructures import *
 
-print(Solution().nextGreaterElements([1,1,1,1,1]))
+print(Solution().findJudge(3, [[1,3],[2,3],[3,1]]))
