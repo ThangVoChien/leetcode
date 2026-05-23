@@ -3,7 +3,7 @@ from typing import List
 class Solution:
     def validPath(self, n: int, edges: List[List[int]], source: int, destination: int) -> bool:
         parent = list(range(n))
-        rank = [1] * n
+        rank = [0] * n
 
         def find(node):
             if parent[node] != node:
