@@ -1,6 +1,4 @@
-from algorithms.SurroundedRegions import *
+from algorithms.PalindromePartitioning import *
 from dataStructures import *
 
-sol = [["X"]]
-Solution().solve(sol)
-print(sol)
+print(Solution().partition("a"))
