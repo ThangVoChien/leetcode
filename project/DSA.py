@@ -1,4 +1,4 @@
-from algorithms.PalindromePartitioning import *
+from algorithms.CloneGraph import *
 from dataStructures import *
 
-print(Solution().partition("a"))
+print(Solution().cloneGraph(graph([])))
