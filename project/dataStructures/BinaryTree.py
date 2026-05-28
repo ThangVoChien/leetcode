@@ -1,7 +1,7 @@
 from typing import List
 
 class TreeNode:
-    def __init__(self, val=0, left=None, right=None, next=None):
+    def __init__(self, val: int, left: 'TreeNode' = None, right: 'TreeNode' = None, next=None):
         self.val = val
         self.left = left
         self.right = right
@@ -38,7 +38,7 @@ def binaryTree(tree: List):
     if tree == None or len(tree) == 0:
         return None
     
-    root = TreeNode(val=tree[0])
+    root = TreeNode(tree[0])
     list = []
     list.append(root)
     list.append(None)
@@ -49,14 +49,14 @@ def binaryTree(tree: List):
 
         if i < len(tree):
             if tree[i] != None:
-                left = TreeNode(val=tree[i])
+                left = TreeNode(tree[i])
                 node.left = left
                 list.append(left)
             i+=1
 
         if i < len(tree):
             if tree[i] != None:
-                right = TreeNode(val=tree[i])
+                right = TreeNode(tree[i])
                 node.right = right
                 list.append(right)
             i+=1
