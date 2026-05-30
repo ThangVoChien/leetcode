@@ -68,6 +68,7 @@ def linkedList(list: List, pos: int = -1):
     
     node.next = cycle
     if isinstance(list[i], List):
-        node.random = random[list[len(list)-1][1]]
+        if list[len(list)-1][1] != None:
+            node.random = random[list[len(list)-1][1]]
 
     return head

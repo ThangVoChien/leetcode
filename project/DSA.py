@@ -1,4 +1,4 @@
-from algorithms.GasStation import *
+from algorithms.CopyListWithRandomPointer import *
 from dataStructures import *
 
-print(Solution().canCompleteCircuit([3,0,1,0,3], [0,2,0,5,0]))
+print(Solution().copyRandomList(linkedList([[7,null],[13,0],[11,4],[10,2],[1,0]])))
