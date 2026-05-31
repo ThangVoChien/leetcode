@@ -3,6 +3,9 @@ from dataStructures.LinkedList import ListNode as Node
 
 class Solution:
     def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
+        if head == None:
+            return None
+
         sol = Node(head.val)
         copy = sol
 
