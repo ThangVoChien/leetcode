@@ -1,4 +1,4 @@
-from algorithms.ReorderList import *
+from algorithms.BinaryTreePreorderTraversal import *
 from dataStructures import *
 
-print(Solution().reorderList(linkedList([1])))
+print(Solution().preorderTraversal(binaryTree([1])))
