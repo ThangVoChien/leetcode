@@ -1,4 +1,4 @@
-from algorithms.SingleNumber import *
+from algorithms.ReorderList import *
 from dataStructures import *
 
-print(Solution().singleNumber3([0,1]))
+print(Solution().reorderList(linkedList([1])))
