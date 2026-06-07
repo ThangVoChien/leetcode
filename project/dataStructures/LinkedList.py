@@ -1,9 +1,10 @@
 from typing import List
 
 class ListNode:
-    def __init__(self, val: int, next: 'ListNode' = None, random: 'ListNode' = None):
+    def __init__(self, val: int, next: 'ListNode' = None, prev: 'ListNode' = None, random: 'ListNode' = None):
         self.val = val
         self.next = next
+        self.prev = prev
         self.random = random
 
     def __str__(self):
@@ -61,7 +62,9 @@ def linkedList(list: List, pos: int = -1):
         else:
             next = ListNode(list[i])
         node.next = next
+        prev = node
         node = next
+        node.prev = prev
 
         if i == pos:
             cycle = next
