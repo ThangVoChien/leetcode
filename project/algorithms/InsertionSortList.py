@@ -5,6 +5,7 @@ from dataStructures.LinkedList import ListNode
 class Solution:
     def insertionSortList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         head = ListNode(None, head)
+
         def insertionSort(node):
             if node.next == None:
                 return None
@@ -14,18 +15,16 @@ class Solution:
                 node.next = next.next
                 return next
             else:
-                n = insertionSort(node.next)
-                
-                if n == None:
-                    return None
-                elif n.val < node.val:
-                    return n
-                else:
-                    n.next = node.next
-                    node.next = n
-
-        node = insertionSort(head)
-        while node != None:
-            node = insertionSort(node)
+                n = node
+                while n != None:
+                    n = insertionSort(node.next)
+                    if n == None:
+                        return None
+                    elif node.val != None and n.val < node.val:
+                        return n
+                    else:
+                        n.next = node.next
+                        node.next = n
+        insertionSort(head)
 
         return head.next

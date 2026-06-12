@@ -1,4 +1,4 @@
-from algorithms.ImplementQueueUsingStacks import *
+from algorithms.EvaluateReversePolishNotation import *
 from dataStructures import *
 
-print(Solution().preorderTraversal(binaryTree([1])))
+print(Solution().evalRPN(["10","6","9","3","+","-11","*","/","*","17","+","5","+"]))
