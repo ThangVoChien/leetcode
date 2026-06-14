@@ -1,4 +1,4 @@
-from algorithms.EvaluateReversePolishNotation import *
+from algorithms.SortList import *
 from dataStructures import *
 
-print(Solution().evalRPN(["10","6","9","3","+","-11","*","/","*","17","+","5","+"]))
+print(Solution().sortList(linkedList([4,2,1,3])))

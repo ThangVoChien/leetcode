@@ -5,8 +5,8 @@ class Solution:
     def evalRPN(self, tokens: List[str]) -> int:
         if len(tokens) == 1:
             return int(tokens[0])
+        
         sol = 0
-
         st = []
         for token in tokens:
             if token not in ['+', '-', '*', '/']:
