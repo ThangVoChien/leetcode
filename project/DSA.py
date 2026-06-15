@@ -1,4 +1,4 @@
-from algorithms.SortList import *
+from algorithms.ReverseWordsInAString import *
 from dataStructures import *
 
-print(Solution().sortList(linkedList([4,2,1,3])))
+print(Solution().reverseWords("a good   example"))

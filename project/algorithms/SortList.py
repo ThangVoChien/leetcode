@@ -10,7 +10,6 @@ class Solution:
             leng+=1
 
         def divide(head, leng):
-            print(head.val, leng)
             if leng <= 1:
                 return head
 
@@ -20,11 +19,16 @@ class Solution:
             l = leng
             mid = leng // 2
             while l > mid:
-                n2 = n2.next
                 l-=1
+                if l <= mid:
+                    t = n2.next
+                    n2.next = None
+                    n2 = t
+                else:
+                    n2 = n2.next
 
-            n1 = divide(n1, mid)
-            n2 = divide(n2, leng - mid)
+            n1 = divide(n1, leng - mid)
+            n2 = divide(n2, mid)
 
             return conquer(n1, n2)
 
@@ -41,11 +45,12 @@ class Solution:
 
                     node.next = n2
                     n2.next = t1
-
-                    node = t1
                     n2 = t2
                 else:
                     node = node.next
+
+            if node.next == None:
+                node.next = n2
 
             return head.next
         
