@@ -1,4 +1,4 @@
-from algorithms.ReverseWordsInAString import *
+from algorithms.MaximumProductSubarray import *
 from dataStructures import *
 
-print(Solution().reverseWords("a good   example"))
+print(Solution().maxProduct([-2]))
