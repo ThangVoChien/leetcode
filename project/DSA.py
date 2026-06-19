@@ -1,4 +1,4 @@
 from algorithms.FindMinimumInRotatedSortedArray import *
 from dataStructures import *
 
-print(Solution().findMin([11,13,15,17]))
+print(Solution().findMin2([2,2,2,0,1]))
