@@ -1,4 +1,4 @@
-from algorithms.FindMinimumInRotatedSortedArray import *
+from algorithms.FindPeakElement import *
 from dataStructures import *
 
-print(Solution().findMin2([2,2,2,0,1]))
+print(Solution().findPeakElement([1]))
