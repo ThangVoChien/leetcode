@@ -1,4 +1,4 @@
-from algorithms.FractionToRecurringDecimal import *
+from algorithms.ExcelSheetColumnTitle import *
 from dataStructures import *
 
-print(Solution().fractionToDecimal(-50, 8))
+print(Solution().convertToTitle(2147483647))
