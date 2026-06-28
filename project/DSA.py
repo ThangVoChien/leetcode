@@ -1,4 +1,4 @@
-from algorithms.ExcelSheetColumnTitle import *
+from algorithms.ExcelSheetColumnNumber import *
 from dataStructures import *
 
-print(Solution().convertToTitle(2147483647))
+print(Solution().titleToNumber("ZY"))
