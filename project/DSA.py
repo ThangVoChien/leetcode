@@ -1,4 +1,4 @@
-from algorithms.ExcelSheetColumnNumber import *
+from algorithms.FactorialTrailingZeroes import *
 from dataStructures import *
 
-print(Solution().titleToNumber("ZY"))
+print(Solution().trailingZeroes(30))
