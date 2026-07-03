@@ -1,4 +1,4 @@
-from algorithms.FactorialTrailingZeroes import *
+from algorithms.CreateADataFrameFromList import *
 from dataStructures import *
 
-print(Solution().trailingZeroes(30))
+print(createDataframe([[1,15],[2,11],[3,11],[4,20]]))
