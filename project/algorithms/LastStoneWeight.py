@@ -1,18 +1,19 @@
 from typing import List
-from dataStructures.BinaryHeap import maxHeap
+import heapq
 
 class Solution:
     def lastStoneWeight(self, stones: List[int]) -> int:
-        heap = maxHeap(stones)
+        heap = [-s for s in stones]
+        heapq.heapify(heap)
 
-        while len(heap.vals) > 1:
-            s1 = heap.pop()
-            s2 = heap.pop()
+        while len(heap) > 1:
+            s1 = -heapq.heappop(heap)
+            s2 = -heapq.heappop(heap)
 
             s = abs(s1 - s2)
-            heap.append(s)
+            heapq.heappush(heap, -s)
 
-        if len(heap.vals) == 0:
+        if len(heap) == 0:
             return 0
         else:
-            return heap.vals[0]
+            return -heap[0]
