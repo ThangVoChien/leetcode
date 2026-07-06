@@ -1,4 +1,11 @@
-from algorithms.CreateADataFrameFromList import *
+from algorithms.SelectData import *
 from dataStructures import *
 
-print(createDataframe([[1,15],[2,11],[3,11],[4,20]]))
+print(selectData(schema("""
+| student_id | name    | age |
+| ---------- | ------- | --- |
+| 101        | Ulysses | 13  |
+| 53         | William | 10  |
+| 128        | Henry   | 6   |
+| 3          | Henry   | 11  |
+""")))
