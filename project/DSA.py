@@ -1,11 +1,13 @@
-from algorithms.SelectData import *
+from algorithms.CreateANewColumn import *
 from dataStructures import *
 
-print(selectData(schema("""
-| student_id | name    | age |
-| ---------- | ------- | --- |
-| 101        | Ulysses | 13  |
-| 53         | William | 10  |
-| 128        | Henry   | 6   |
-| 3          | Henry   | 11  |
+print(createBonusColumn(schema("""
+| name    | salary |
+| ------- | ------ |
+| Piper   | 4548   |
+| Grace   | 28150  |
+| Georgia | 1103   |
+| Willow  | 6593   |
+| Finn    | 74576  |
+| Thomas  | 24433  |
 """)))

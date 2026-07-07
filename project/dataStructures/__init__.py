@@ -25,8 +25,8 @@ def schema(table: str) -> pd.DataFrame:
         frame = frame.astype(
             {
                 column[i]: 
-                'Int64' if data[0][i].isdigit()
-                else 'Float64' if data[0][i].isdecimal()
+                'Int64' if re.match(r'^-?\d+$', data[0][i])
+                else 'Float64' if re.match(r'^-?\d+\.\d+$', data[0][i])
                 else 'datetime64[ns]' if re.match(r'^\d{4}-\d{2}-\d{2}$', data[0][i])
                 else 'object'
                 for i in range(len(column))
