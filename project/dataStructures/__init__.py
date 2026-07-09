@@ -14,22 +14,26 @@ def schema(table: str) -> pd.DataFrame:
     for row in table.strip().split('\n'):
         if column != null:
             if t:
-                data.append(re.findall(r'(?<=\|)\s*([^|]+?)\s*(?=\|)', row))
+                n = re.findall(r'(?<=\|)\s*([^|]+?)\s*(?=\|)', row)
+                for i in range(len(n)):
+                    if n[i] == 'null':
+                        n[i] = None
+                data.append(n)
             else:
                 t = True
         else:
             column = re.findall(r'(?<=\|)\s*([^|]+?)\s*(?=\|)', row)
 
-    frame =  pd.DataFrame(data, columns=column)
+    frame = pd.DataFrame(data, columns=column)
     if not frame.empty:
         frame = frame.astype(
             {
-                column[i]: 
-                'Int64' if re.match(r'^-?\d+$', data[0][i])
-                else 'Float64' if re.match(r'^-?\d+\.\d+$', data[0][i])
-                else 'datetime64[ns]' if re.match(r'^\d{4}-\d{2}-\d{2}$', data[0][i])
+                c: 
+                'Int64' if re.match(r'^-?\d+$', frame[c].dropna().iloc[0])
+                else 'Float64' if re.match(r'^-?\d+\.\d+$', frame[c].dropna().iloc[0])
+                else 'datetime64[ns]' if re.match(r'^\d{4}-\d{2}-\d{2}$', frame[c].dropna().iloc[0])
                 else 'object'
-                for i in range(len(column))
+                for c in column
             }
         )
 
