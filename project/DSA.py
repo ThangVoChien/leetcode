@@ -1,9 +1,11 @@
-from algorithms.ChangeDataType import *
+from algorithms.FillMissingData import *
 from dataStructures import *
 
-print(changeDatatype(schema("""
-| student_id | name | age | grade |
-| ---------- | ---- | --- | ----- |
-| 1          | Ava  | 6   | 73.0  |
-| 2          | Kate | 15  | 87.0  |
+print(fillMissingValues(schema("""
+| name            | quantity | price |
+| --------------- | -------- | ----- |
+| Wristwatch      | null     | 135   |
+| WirelessEarbuds | null     | 821   |
+| GolfClubs       | 779      | 9319  |
+| Printer         | 849      | 3051  |
 """)))
