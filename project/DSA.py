@@ -1,11 +1,12 @@
-from algorithms.ModifyColumns import *
+from algorithms.RenameColumns import *
 from dataStructures import *
 
-print(modifySalaryColumn(schema("""
-| name    | salary |
-| ------- | ------ |
-| Jack    | 19666  |
-| Piper   | 74754  |
-| Mia     | 62509  |
-| Ulysses | 54866  |
+print(renameColumns(schema("""
+| id | first   | last     | age |
+| -- | ------- | -------- | --- |
+| 1  | Mason   | King     | 6   |
+| 2  | Ava     | Wright   | 7   |
+| 3  | Taylor  | Hall     | 16  |
+| 4  | Georgia | Thompson | 18  |
+| 5  | Thomas  | Moore    | 10  |
 """)))
