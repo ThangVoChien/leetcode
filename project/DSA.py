@@ -1,12 +1,9 @@
-from algorithms.RenameColumns import *
+from algorithms.ChangeDataType import *
 from dataStructures import *
 
-print(renameColumns(schema("""
-| id | first   | last     | age |
-| -- | ------- | -------- | --- |
-| 1  | Mason   | King     | 6   |
-| 2  | Ava     | Wright   | 7   |
-| 3  | Taylor  | Hall     | 16  |
-| 4  | Georgia | Thompson | 18  |
-| 5  | Thomas  | Moore    | 10  |
+print(changeDatatype(schema("""
+| student_id | name | age | grade |
+| ---------- | ---- | --- | ----- |
+| 1          | Ava  | 6   | 73.0  |
+| 2          | Kate | 15  | 87.0  |
 """)))
