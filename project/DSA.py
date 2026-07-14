@@ -1,11 +1,13 @@
-from algorithms.FillMissingData import *
+from algorithms.MethodChaining import *
 from dataStructures import *
 
-print(fillMissingValues(schema("""
-| name            | quantity | price |
-| --------------- | -------- | ----- |
-| Wristwatch      | null     | 135   |
-| WirelessEarbuds | null     | 821   |
-| GolfClubs       | 779      | 9319  |
-| Printer         | 849      | 3051  |
+print(findHeavyAnimals(schema("""
+| name     | species | age | weight |
+| -------- | ------- | --- | ------ |
+| Tatiana  | Snake   | 98  | 464    |
+| Khaled   | Giraffe | 50  | 41     |
+| Alex     | Leopard | 6   | 328    |
+| Jonathan | Monkey  | 45  | 463    |
+| Stefan   | Bear    | 100 | 50     |
+| Tommy    | Panda   | 26  | 349    |
 """)))
