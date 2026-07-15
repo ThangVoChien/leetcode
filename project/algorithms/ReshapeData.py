@@ -7,4 +7,4 @@ def meltTable(report: pd.DataFrame) -> pd.DataFrame:
     return report.melt(id_vars=['product'], var_name='quarter', value_name='sales')
     
 def pivotTable(weather: pd.DataFrame) -> pd.DataFrame:
-    pass
+    return weather.pivot(index = "month", columns = 'city', values = 'temperature')
