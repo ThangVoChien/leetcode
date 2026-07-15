@@ -1,13 +1,17 @@
-from algorithms.MethodChaining import *
+from algorithms.ReshapeData import *
 from dataStructures import *
 
-print(findHeavyAnimals(schema("""
-| name     | species | age | weight |
-| -------- | ------- | --- | ------ |
-| Tatiana  | Snake   | 98  | 464    |
-| Khaled   | Giraffe | 50  | 41     |
-| Alex     | Leopard | 6   | 328    |
-| Jonathan | Monkey  | 45  | 463    |
-| Stefan   | Bear    | 100 | 50     |
-| Tommy    | Panda   | 26  | 349    |
+print(pivotTable(schema("""
+| city         | month    | temperature |
+| ------------ | -------- | ----------- |
+| Jacksonville | January  | 13          |
+| Jacksonville | February | 23          |
+| Jacksonville | March    | 38          |
+| Jacksonville | April    | 5           |
+| Jacksonville | May      | 34          |
+| ElPaso       | January  | 20          |
+| ElPaso       | February | 6           |
+| ElPaso       | March    | 26          |
+| ElPaso       | April    | 2           |
+| ElPaso       | May      | 43          |
 """)))
