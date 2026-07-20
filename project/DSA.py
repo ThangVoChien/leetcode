@@ -1,17 +1,14 @@
-from algorithms.ReshapeData import *
+from algorithms.CombineTwoTables import *
 from dataStructures import *
 
-print(pivotTable(schema("""
-| city         | month    | temperature |
-| ------------ | -------- | ----------- |
-| Jacksonville | January  | 13          |
-| Jacksonville | February | 23          |
-| Jacksonville | March    | 38          |
-| Jacksonville | April    | 5           |
-| Jacksonville | May      | 34          |
-| ElPaso       | January  | 20          |
-| ElPaso       | February | 6           |
-| ElPaso       | March    | 26          |
-| ElPaso       | April    | 2           |
-| ElPaso       | May      | 43          |
+print(combine_two_tables(schema("""
+| personId | lastName | firstName |
+| -------- | -------- | --------- |
+| 1        | Wang     | Allen     |
+| 2        | Alice    | Bob       |
+"""), schema("""
+| addressId | personId | city          | state      |
+| --------- | -------- | ------------- | ---------- |
+| 1         | 2        | New York City | New York   |
+| 2         | 3        | Leetcode      | California |
 """)))

@@ -11,7 +11,7 @@
         "statusBar.background": "#0e0d11",
         "statusBar.foreground": "#e7e7e7",
         "statusBarItem.hoverBackground": "#26232e",
-        "statusBarItem.remoteBackground": "#0e0d11",
+        "statusBarItem.remoteBackground": "#783c28",
         "statusBarItem.remoteForeground": "#e7e7e7",
         "titleBar.activeBackground": "#0e0d11",
         "titleBar.activeForeground": "#e7e7e7",
@@ -25,7 +25,12 @@
         "statusBar.debuggingBorder": "#10110d",
         "statusBar.debuggingForeground": "#e7e7e7",
         "tab.activeBorder": "#26232e",
-        "titleBar.border": "#0e0d11"
+        "titleBar.border": "#0e0d11",
+        "activityBarTop.activeBackground": "#26232e",
+        "activityBarTop.background": "#26232e",
+        "activityBarTop.foreground": "#e7e7e7",
+        "activityBarTop.inactiveForeground": "#e7e7e799",
+        "commandCenter.foreground": "#e7e7e7"
     },
     "peacock.color": "#0e0d11",
     "python-envs.defaultEnvManager": "ms-python.python:conda",
