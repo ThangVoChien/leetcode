@@ -1,10 +1,13 @@
-from algorithms.NthHighestSalary import *
+from algorithms.RankScores import *
 from dataStructures import *
 
-print(nth_highest_salary(schema("""
-| id | salary |
-| -- | ------ |
-| 1  | 100    |
-| 2  | 200    |
-| 3  | 300    |
-"""), 1))
+print(order_scores(schema("""
+| id | score |
+| -- | ----- |
+| 1  | 3.5   |
+| 2  | 3.65  |
+| 3  | 4     |
+| 4  | 3.85  |
+| 5  | 4     |
+| 6  | 3.65  |
+""")))
