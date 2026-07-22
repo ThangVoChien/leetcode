@@ -1,13 +1,14 @@
-from algorithms.RankScores import *
+from algorithms.ConsecutiveNumbers import *
 from dataStructures import *
 
-print(order_scores(schema("""
-| id | score |
-| -- | ----- |
-| 1  | 3.5   |
-| 2  | 3.65  |
-| 3  | 4     |
-| 4  | 3.85  |
-| 5  | 4     |
-| 6  | 3.65  |
+print(consecutive_numbers(schema("""
+| id | num |
+| -- | --- |
+| 1  | 1   |
+| 2  | 1   |
+| 3  | 1   |
+| 4  | 2   |
+| 5  | 1   |
+| 6  | 2   |
+| 7  | 2   |
 """)))
