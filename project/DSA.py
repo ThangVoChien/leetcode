@@ -1,14 +1,11 @@
-from algorithms.ConsecutiveNumbers import *
+from algorithms.EmployeesEarningMoreThanTheirManagers import *
 from dataStructures import *
 
-print(consecutive_numbers(schema("""
-| id | num |
-| -- | --- |
-| 1  | 1   |
-| 2  | 1   |
-| 3  | 1   |
-| 4  | 2   |
-| 5  | 1   |
-| 6  | 2   |
-| 7  | 2   |
+print(find_employees(schema("""
+| id | name  | salary | managerId |
+| -- | ----- | ------ | --------- |
+| 1  | Joe   | 70000  | 3         |
+| 2  | Henry | 80000  | 4         |
+| 3  | Sam   | 60000  | null      |
+| 4  | Max   | 90000  | null      |
 """)))
